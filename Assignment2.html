@@ -123,7 +123,7 @@
 
                     <div class="wrapper_affordances">
                         <div class="objects">
-                            <p>The sensor generates a voltage when being flexed, shocked or touched. The voltage output for the piezo sensor can be as much as 90 volts. We hooked a piece of piezo film to the arduino and observed what happened. The sensor, while being flexed -intensively- , generated a dispensable low voltage output. However, when this output is high enough one could think about creating a self-sufficient device which does not take a negative load on the environment. </p>
+                            <p>The sensor generates a voltage when being flexed, shocked or touched. The voltage output for the piezo sensor can be as much as 90 volts. We hooked a piece of piezo film to the arduino and observed what happened. The sensor, while being flexed -intensively- , generated a very low voltage output. This made the sensor useless for us. However, when this output is high enough one could think about creating a self-sufficient device which does not take a negative load on the environment. </p>
                             <p>Example: These Piezo sensors can be incorporated into leaves of artificial trees. Thousand and thousands of these sensors can together create enough voltage to empower lights, sound, etc. </p>
                             <ul>
                                 <li>Flexible PVDF Piezo Polymer Film</li>
@@ -211,7 +211,7 @@ Max. Working voltage: 24V</li>
           </h3>
             <p>In the end we decided to do something with weather, in particular with wind. We came up with an idea of mapping colors (RGB) to wind intensity. One should think of this as a couple of large bendable poles which are able to sense the intensity of the wind. These poles are designed as objects and can be placed on a square or public area. Whenever the wind blows the poles act as mysterious tall waving objects to generate curiosity of bystanders. Whenever the poles wave in the wind, light begins to change colours accordingly to the intensity of the wind. This can be thought of as an easy accessible visualisation of the weather. While the physical poles are visibly waving in the wind the visual manifestation of light changes continuously, another attractive feature. As said before it is there to generate a mysterious feeling of curiosity (e.g. why are the lights changing their colors?). Initially, the object should cause a wow feeling, it should surprise people. However a short time of investigating should be enough to understand that wind is the cause for the lights to change color. 
 </p>
-            <p>The idea is that whenever it is cold, the light tries to warm you up with different shades of red light. As more people get attracted to this mimicked feeling of warmth the group around the light starts to grow. The warm light starts a proces in where people are going to feel more coherently to each other. Few simple white poles attract your attention and you look to its origin and see a warm red/orange light glowing. Obviously you want to know what’s going on and you walk towards the poles, it happens that more people are interested and a small gathering is going on. The same principle can be used for warm summer times, the light will emit blue tinted light to ‘cool’ the people around it.
+            <p>The idea is that whenever it is cold, the light tries to warm you up with different shades of red light. When more people get attracted to the mimicked feeling of warmth the group starts to grow. The warm light starts a proces in where people are going to feel more coherently to each other. Imagine yourself walking down a square. Few simple white poles attract your attention and you look to its origin and see a warm red/orange light glowing. Obviously you want to know what’s going on and you walk towards the poles, it happens that more people are interested and a small gathering is going on. The same principle can be used for warm summer times, the light will emit blue tinted light to ‘cool’ the people around it.
 </p>
 
             <h3>
@@ -230,7 +230,7 @@ Max. Working voltage: 24V</li>
                 </div> 
             </div>
             
-            <p>There are two main analog sensors, a LM35 temperature sensor, and a SEN-10264 flex sensor. The temperature sensor uses generates a greater voltage when it gets warmer and the flex sensor increases its resistance the more it is bend. As pointed out in the research the flex sensor can only bend in one specific way, thus needs to be carefully used. This sensor is powered by the 3.3 voltage output of the Arduino UNO. Because the resistance of the SEN-10264 varies much (see specifications) another resistor is needed. In our project we used a 10kΩ resistor to make sure there wouldn’t be too much current flowing through our circuit.</p>
+            <p>There are two main analog sensors, a LM35 temperature sensor, and a SEN-10264 flex sensor. The temperature sensor generates a greater voltage when it gets warmer and the flex sensor increases its resistance the more it is bend. As pointed out in the research the flex sensor can only bend in one specific way, thus needs to be carefully used. This sensor is powered by the 5 voltage output of the Arduino UNO. Because the resistance of the SEN-10264 varies much (see specifications) another resistor is needed. In our project we used a 10kΩ (pulldown) resistor to make sure there wouldn’t be too much current flowing through our circuit.</p>
             
             <p>An arduino is used to receive the input from both sensors and do some calculations. It basically maps certain bends to certain green values(0...255), it does this in combination with a 255 red or blue value to generate a variety of red and blue shades. </p>
             
@@ -293,17 +293,36 @@ Max. Working voltage: 24V</li>
             <h3>
               <span aria-hidden="true" class="octicon octicon-link"></span>Images 
           </h3> 
-            <p>Multiple images are shown below, some of them contain the process as well. </p>
+            <p>Multiple images are shown below, some of them contain the process as well. For a video of the program in action click <a href="https://github.com/tomhockey01/CART360/blob/master/images/Bestand_001.mov?raw=true">here</a>. </p>
             <div class="images">
                 <div class="responsive">
                     <div class="img">
-                        <a target="_blank" href="\">
-                            <img src="" alt="" width="300" height="200">
+                        <a target="_blank" href="https://github.com/tomhockey01/CART360/blob/master/images/Bestand_000.jpeg?raw=true">
+                            <img src="https://github.com/tomhockey01/CART360/blob/master/images/Bestand_000.jpeg?raw=true" alt="3 flex sensors" width="300" height="200">
                         </a>
                     </div>
                 </div> 
             </div>
 
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Group evaluations 
+          </h3> 
+            <h5>Tom about Jurre</h5>
+            <p>Jurre and I have been working together for a long time, this means that we know how to get along and organize projects pretty well. Just as always, we’ve had some struggles with coming up with an idea which we both liked. Even so we’ve been arguing about different implementations but I always see this as a good thing, it gets you involved even more. </p>
+
+<p>Jurre has made the entire marquette and the storyboards, we’ve had a little discussion about it but he is the creative guy between us two. I usually am more practical and into programming. Therefore I’ve made this my little project, of course there’s always a lot of discussion going on, mainly on how the programming extends or limits our ideas. This is where we both go into the coding and figure out a way to minimize losses/gain extensions.</p>
+
+<p>We both worked equally much on the documentation, this means: we not only generate text. More importantly we check each other's work and where needed we change it. This brings me to the next thing, whenever we’re checking each other, new ideas or completely different meanings about the project arise. Most of the time we start sparring about this and find a common road to continue on, another good thing as it improves involvement. 
+</p>
+            
+            <h5>Jurre about Tom</h5>
+            <p>Tom and I have been working together for a long time, which works well because apparently we can get stuff done. We both know our (in)capabilities well and rely upon each other in solving issues. Unfortunately this project just came in a very busy time for me. In the week of the deadline I had 3 other deadlines and on top of that my family was visiting me. Basically this week was trying to be at 2 places at once and doing 3 times at the same time. Unfortunately my folks from the Netherlands were a bit too much.</p> 
+
+<p>However this project was fun to do because we had a cool and viable idea.  The concept was easy understandable and we were able to think in pseudocode. We both understand how to code but since I had not much time Tom did the coding. Whenever we ran in problems code- or concept wise we figured how to solve it together. Since tom did the coding, I took the physical part of the project on me. </p>
+
+<p>We both worked a lot on documentation. Almost our entire process of thought is written down on this website. We always write in google docs because that makes it easy to constantly improve each other's texts. 
+</p>
+            
             <!-- FOOTER  -->
             <div id="footer_wrap" class="outer">
                 <footer class="inner">
