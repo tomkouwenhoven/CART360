@@ -28,37 +28,45 @@
     <div id="main_content_wrap" class="outer">
         <section id="main_content" class="inner">
             <h2>
-            <a id="Automatic_bike_braking_lights" class="anchor" href="#Automatic_bike_braking_lights" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automatic bike braking lights</h2>
+            <a id="Weather_visualization" class="anchor" href="#Weather_visualization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weather visualization</h2>
 
-            <p>This page is dedicated to the first assignment ("IF") on CART 360 Tangible media and physical computing. For a high level description click <a href="http://slab.concordia.ca/assignment-1-if/">here</a>.</p>
+            <p>This page is dedicated to the second assignment ("THIS") on CART 360 Tangible media and physical computing. For a high level description click <a href="http://slab.concordia.ca/assignment-2-this/">here</a>.</p>
             <div class="documentation">
                 <h3>
               <span aria-hidden="true" class="octicon octicon-link"></span>Documentation of research 
           </h3> 
-                <p>I walked around my apartment and basicly just tested every object on their electrical properties. This resulted in finding multiple but rather different objects. They all are conductive but besides that they do not have a lot in common. This can be an advantage as it keeps my option open. The table below shows four objects with their corresponding affordances. These can become useful when designing an interface.</p>
+                <p>Multiple sensors have been looked into. Most of the time we had some struggles with objectively looking at parts. Before we noticed we were thinking: “How could we use this?” We believe that this is not the right approach, one needs to start looking for cool objects regardless of its functions. Lots of searching resulted in the following analog sensors. 
+</p>
 
 
                 <div class="wrapper_ass1_total_affordances">
                     <div class="wrapper_materials">
                         <div class="title">
-                            <p>Material/Object</p>
+                            <p>Analog Sensor</p>
                         </div>
                         <div class="objects">
-                            <p>Brake cable of bike</p>
+                            <p><a href= "https://www.sparkfun.com/products/10264">Flex Sensor 2.2” - SEN 10264</a></p>
                         </div>
                     </div>
 
                     <div class="wrapper_affordances">
                         <div class="title">
-                            <p>Affordances</p>
+                            <p>Features</p>
                         </div>
                         <div class="objects">
+                            <p>The flex sensor is an analog sensor which is using flexibility to determine the amount of resistance. The documentation states that the resistance ranges from 30k ohm to 50-70k ohm. However, with use of the multimeter we discovered this range is different. The flex sensor comes in two sizes (2.2 and 4,5 inch). The sensors are available in the lab so we were able to play a little with them. We observed that the sensor needs a specific type of bendage in order to deliver usable results. Specific as in not bending it at the ‘stem’ but at the actual sensing part. This is important because only then the sensor outputs correct readings. According to the documentation the sensor works between 0°  (flat) and 90°. We found that it gives output when bending further than this stated threshold. A possible problem for us to occur when using this sensor is that the shape is not persistent. The sensor will probably slowly shaped to a position which is used the most. 
+</p>
                             <ul>
-                                <li>Conductive</li>
-                                <li>Every bike has brake cables(implemented)</li>
-                                <li>All brake cables are made of the same material</li>
-                                <li>The cable is flexible</li>
-                                <li>It is functional rather than fancy</li>
+                                <li>2.2” (5.588 cm)</li>
+                                <li>Minimal working voltage 3.3V</li>
+                                <li>Resistor value: 30kΩ(flat)<br>50kΩ - 70kΩ(90° angle)
+</li>
+                                <li>Temperature Range: -35°C to +80°C
+</li>
+                                <li>Power Rating: 0.5 Watt continuous; 1 Watt peak</li>
+                                <li>In combination with static resistor(10kΩ to 100kΩ works) you can produce a variable voltage that can be read by a microcontroller’s analog to digital converter.</li>
+                                <li>Connector is 0.1” spaced (thus breadboard friendly)
+</li>
                             </ul>
                         </div>
                     </div>
@@ -67,19 +75,19 @@
                 <div class="wrapper_ass1_total_affordances">
                     <div class="wrapper_materials">
                         <div class="objects">
-                            <p>Click system of bracelet</p>
+                            <p><a href="https://www.sparkfun.com/products/11574">SEN-11574<br> HeartBeat Sensor</a></p>
                         </div>
                     </div>
 
                     <div class="wrapper_affordances">
                         <div class="objects">
+                            <p>The heartbeat sensor can be attached to the thumb or earlobe.</p>
                             <ul>
-                                <li>Conductive</li>
-                                <li>Shaped to fit the bracelet and therefore tiny</li>
-                                <li>Design is different for every bracelet (this needs to be taken into account when thinking of a design)</li>
-                                <li>Easy click on and off function and therefore easy to use</li>
-                                <li>Magnatic</li>
-                                <li>Function of bracelet is beautification</li>
+                                <li>3.3/5 Volt</li>
+                                <li>Consumes 4mA</li>
+                                <li>24” cable soldered 
+</li>
+                                <li>Requires PulseSensorAmpedHardware libraries. </li>
                             </ul>
                         </div>
                     </div>
@@ -88,18 +96,19 @@
                 <div class="wrapper_ass1_total_affordances">
                     <div class="wrapper_materials">
                         <div class="objects">
-                            <p>Keys</p>
+                            <p><a href="http://www.spikenzielabs.com/Catalog/index.php?main_page=product_info&products_id=351">LM35 <br>Temperature sensor</a></p>
                         </div>
                     </div>
 
                     <div class="wrapper_affordances">
                         <div class="objects">
+                            <p>This temperature sensor is basically plug and play with the arduino. The sensor measures the temperature with an accuracy of 0.5 C. In combination with the arduino, one could easily make a primitive temperature regulator.</p>
                             <ul>
-                                <li>Conductive</li>
-                                <li>Used to open locks (can be an opportunity)</li>
-                                <li>Small, often combined with other keys</li>
-                                <li>Hardly bendable</li>
-                                <li>Mostly functional and most of the time designs don't matter</li>
+                                <li>TO-92 package</li>
+                                <li>Linear + 10.0 mV/˚C scale factor</li>
+                                <li>0.5˚C accuracy
+</li>
+                                <li>Operates from 4 to 30 volts</li>
                             </ul>
                         </div>
                     </div>
@@ -108,29 +117,149 @@
                 <div class="wrapper_ass1_total_affordances">
                     <div class="wrapper_materials">
                         <div class="objects">
-                            <p>Ring(white gold)</p>
+                            <p><a href="https://www.sparkfun.com/products/9196">SEN-09196 <br>Piezo vibration sensor</a></p>
                         </div>
                     </div>
 
                     <div class="wrapper_affordances">
                         <div class="objects">
+                            <p>The sensor generates a voltage when being flexed, shocked or touched. The voltage output for the piezo sensor can be as much as 90 volts. We hooked a piece of piezo film to the arduino and observed what happened. The sensor, while being flexed -intensively- , generated a dispensable low voltage output. However, when this output is high enough one could think about creating a self-sufficient device which does not take a negative load on the environment. </p>
+                            <p>Example: These Piezo sensors can be incorporated into leaves of artificial trees. Thousand and thousands of these sensors can together create enough voltage to empower lights, sound, etc. </p>
                             <ul>
-                                <li>Conductive</li>
-                                <li>Primarily used as style object</li>
-                                <li>Mostly small and very locative on the body</li>
-                                <li>It’s a sustainable object</li>
-                                <li>Gold(Au) is a noble metal and very expensive</li>
-                                <li>Function of ring is beautification</li>
+                                <li>Flexible PVDF Piezo Polymer Film</li>
+                                <li>Wide dynamic range</li>
+                                <li>Laminated for higher voltage output</li>
+                                <li>0.1" breadboard friendly leads</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wrapper_ass1_total_affordances">
+                    <div class="wrapper_materials">
+                        <div class="objects">
+                            <p><a href="https://abra-electronics.com/electromechanical/solenoids/tem01071b-g1-4-water-flow-sensor.html">TEM01071B G1/4" <br>Water Flow Sensor</a></p>
+                        </div>
+                    </div>
+
+                    <div class="wrapper_affordances">
+                        <div class="objects">
+                            <p>The Water flow sensor can be used to measure the flow of liquids. This device works with a rotating wheel which pulses an analog hall sensor. The faster the wheel rotates the more pulses it detects. </p>
+                            <ul>
+                                <li>Mini. Working voltage: DC 4.5V<br>
+Max. Working voltage: 24V</li>
+                                <li>Max. Working current 15mA</li>
+                                <li>Flow Rate Range: 0.3~6L/min</li>
+                                <li>Load Capacity: ≤10mA (DC 5V)</li>
+                                <li>Operating Temperature: ≤80℃</li>
+                                <li>Liquid Temperature: ≤120℃</li>
+                                <li>Operating Humidity: 35%～90%RH</li>
+                                <li>Water Pressure: ≤2.0MPa</li>
+                                <li>Storage Temperature: -25～+ 80℃</li>
+                                <li>Storage Humidity: 25%～95%RH</li>
+                                <li>Uses a rotating wheel that pulses a hall sensor, by reading those pulses you can monitor the liquid flow. </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <p>My first intention was to start working with either keys or the bracelet. However they are relatively small objects which you can only use close to an electrical circuit. In case of the golden ring this means that a user needs to connect his finger with an electrical signal, I assume that people would not be comfortable with this idea. The keys could be used to initiate some binary response either at the door or somewhere in the house(e.g. switch on a light). However, this would again mean that a user is in touch with the electrical circuit.</p>
-                <p>As I am from the Netherlands and obviously we bike a lot I decided to continue and create a project with the braking system of a bike. The main idea of the project is to notify other road users of braking cyclists. This especially holds when biking during the night and it can be compared with braking lights on cars. Whenever a car stops, braking lights brighten up.</p>
-                <p>However there might be side effects to this light. Typically, what happens when the light gets switched on by accident? Or how long should the braking effect be visible? What to do with social norms, what if people (unnecessary) brake to often and the brake light becomes distracting? These are questions which should be investigated and maybe even tested during a regulated test period.</p>
+                <p>Heartbeat Sensor<br>
+We really liked the idea of creating something wearable which allows us to manipulate stimuli over time. Our aim in the research was that the sensor could be incorporated in a wearable object. The easiest element of our research was the heartbeat sensor. The sensor should be placed on one's thumb or earlobe. With the heart rate as input we could think of an exercise buddy who supports your run through the park by always playing the right bpm song. However, we disliked the fact that the sensor only can be used for measuring the heartbeat. We wanted to create our own sensor-context instead of already having the context of where it should be used. 
+</p>
+                <p>Flex sensor wearable<br>
+We decided to work with the flex sensor. The sensor which is thoroughly described in the research. We really liked the idea to incorporate one or more flex sensors to the hand. The flex sensor can be easily manipulated by attaching it to the a finger. When doing this the user has the ability to use the full range of degrees (0 - 90). The analog data could be used in numerous ways. For example one can think of controlling RGB light with three fingers, where each fingers represents the amount of red, green, and blue. However, we failed to correctly implement the assignments time element. Therefore we decided to do something else with the flex sensor.
+</p>
+                <p>Flex sensor plant<br>
+Then it came to mind to attach the flex sensor to a plant. It happens that a plant or flower does not get enough water. Whenever this happens the plant starts to ‘collide’ to a side because it is being weakened. When attaching a flex sensor to a plant we can determine if the plant isn’t straight anymore. The output could be light or sound in order to remind the owner of it’s dying plant.
+</p>
+                <p>Flex sensor wind<br>
+The same flex sensors do not only use human input, because they “sense” bending, it can also be used apart from human beings. This fact opened a whole new range of implementations which brought us to the current idea. </p>
             </div>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Description Interface 
+          </h3>
+            <p>In the end we decided to do something with weather, in particular with wind. We came up with an idea of mapping colors (RGB) to wind intensity. One should think of this as a couple of large bendable poles which are able to sense the intensity of the wind. These poles are designed as objects and can be placed on a square or public area. Whenever the wind blows the poles act as mysterious tall waving objects to generate curiosity of bystanders. Whenever the poles wave in the wind, light begins to change colours accordingly to the intensity of the wind. This can be thought of as an easy accessible visualisation of the weather. While the physical poles are visibly waving in the wind the visual manifestation of light changes continuously, another attractive feature. As said before it is there to generate a mysterious feeling of curiosity (e.g. why are the lights changing their colors?). Initially, the object should cause a wow feeling, it should surprise people. However a short time of investigating should be enough to understand that wind is the cause for the lights to change color. 
+</p>
+            <p>The idea is that whenever it is cold, the light tries to warm you up with different shades of red light. As more people get attracted to this mimicked feeling of warmth the group around the light starts to grow. The warm light starts a proces in where people are going to feel more coherently to each other. Few simple white poles attract your attention and you look to its origin and see a warm red/orange light glowing. Obviously you want to know what’s going on and you walk towards the poles, it happens that more people are interested and a small gathering is going on. The same principle can be used for warm summer times, the light will emit blue tinted light to ‘cool’ the people around it.
+</p>
 
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Schematic and explanation of your objects’ circuit
+          </h3> 
+            
+            <p>The final idea has been implemented using an arduino UNO and two breadboards. They are neatly built into a small maquette which represents a square. The schematic for all the integrated tech can be seen in the picture below. </p>
+            
+            <div class="images">
+                <div class="responsive">
+                    <div class="img">
+                        <a target="_blank" href="/images/Schematic.png">
+                            <img src="/images/Schematic.png" width="300" height="200">
+                        </a>
+                    </div>
+                </div> 
+            </div>
+            
+            <p>There are two main analog sensors, a LM35 temperature sensor, and a SEN-10264 flex sensor. The temperature sensor uses generates a greater voltage when it gets warmer and the flex sensor increases its resistance the more it is bend. As pointed out in the research the flex sensor can only bend in one specific way, thus needs to be carefully used. This sensor is powered by the 3.3 voltage output of the Arduino UNO. Because the resistance of the SEN-10264 varies much (see specifications) another resistor is needed. In our project we used a 10kΩ resistor to make sure there wouldn’t be too much current flowing through our circuit.</p>
+            
+            <p>An arduino is used to receive the input from both sensors and do some calculations. It basically maps certain bends to certain green values(0...255), it does this in combination with a 255 red or blue value to generate a variety of red and blue shades. </p>
+            
+            <p>In the current implementation the LM35 temperature sensor determines whether it is winter or summer time. One could therefore argue that this sensor is the primary input. The temperature sensor has three pins, each with a different function. It needs a 5 Volt input which can be generated by the Arduino UNO, it has a ground pin and an analog output pin which is connected back to the Arduino. </p>
+            
+            <p>Depending on the seasons, which for now only include summer or winter, the red or blue value is pumped up to 255. For example, during winter, the blue value will be zero whereas the red value will automatically be 255. Note: There are future possibilities here such as changing the red value according to data gathered over the years. </p>
+            
+            <p>The output, which is a RGB LED, can be used in multiple ways. Like described before, to enlighten a pole, or a whole square. One can also think of applications where the outside placed poles generate inside wind sounds so make a (e.g.) big market building feel more natural. A RGB LED does not like too much current, therefore every pin is connected with power after a 220Ω resistor. </p>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Arduino code relevant to your object 
+          </h3> 
+            <p>All flex sensors tend to have differences in their raw analog values. Therefore we wrote a little program to calibrate each sensor. These values need to be considered as every sensor will be connected to the RGB LEDs and these values need to be within range(0...255). To find the relevant code click <a href="">here</a>.</p>
+            
+            <p>Multiple values have been found, and the general calibration can be found in the table below.</p>
+            
+            <div class="wrapper_ass1_total_affordances">
+                    <div class="wrapper_materials">
+                        <div class="title">
+                            <p>Sensor number</p>
+                        </div>
+                        <div class="objects">
+                            <p>Flex sensor 1 (green)</p>
+                        </div>
+                    </div>
+
+                    <div class="wrapper_affordances">
+                        <div class="title">
+                            <p>Calibration values</p>
+                        </div>
+                        <div class="objects">
+                            <ul>
+                                <li>Straigt: 290</li>
+                                <li>Bend: 165</li>
+                                <li>Threshold: 240</li>
+                                <li>Factor: 255/(290-240) = 5.1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="wrapper_ass1_total_affordances">
+                    <div class="wrapper_materials">
+                        <div class="objects">
+                            <p>LM35 Temperature sensor</p>
+                        </div>
+                    </div>
+
+                    <div class="wrapper_affordances">
+                        <div class="objects">
+                            <ul>
+                                <li>Room temperature: 5.5 degrees</li>
+                                <li>Threshold temperature:5.0 degrees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            <p>The code for the actual program can be found <a href="">here.</a>All code is provided with comments which explain everything.</p>
+            
             <h3>
               <span aria-hidden="true" class="octicon octicon-link"></span>Images 
           </h3> 
