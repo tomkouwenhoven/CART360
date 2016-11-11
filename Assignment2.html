@@ -30,12 +30,12 @@
             <h2>
             <a id="Weather_visualization" class="anchor" href="#Weather_visualization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weather visualization</h2>
 
-            <p>This page is dedicated to the second assignment ("THIS") on CART 360 Tangible media and physical computing. For a high level description click <a href="http://slab.concordia.ca/assignment-2-this/">here</a>.</p>
+            <p>This page is dedicated to the second assignment ("THIS") on CART 360 Tangible media and physical computing. For a high level description of the assignment click <a href="http://slab.concordia.ca/assignment-2-this/">here</a>.</p>
             <div class="documentation">
                 <h3>
               <span aria-hidden="true" class="octicon octicon-link"></span>Documentation of research 
           </h3> 
-                <p>Multiple sensors have been looked into. Most of the time we had some struggles with objectively looking at parts. Before we noticed we were thinking: “How could we use this?” We believe that this is not the right approach, one needs to start looking for cool objects regardless of its functions. Lots of searching resulted in the following analog sensors. 
+                <p>Multiple sensors have been looked into. Most of the time we had some struggles with objectively looking at parts. Before we even noticed we were thinking: “How could we use this?” We believe that this is not the right approach, one needs to start looking for cool sensors regardless of its functions. Our research resulted in the following analog sensors. 
 </p>
 
 
@@ -54,7 +54,7 @@
                             <p>Features</p>
                         </div>
                         <div class="objects">
-                            <p>The flex sensor is an analog sensor which is using flexibility to determine the amount of resistance. The documentation states that the resistance ranges from 30k ohm to 50-70k ohm. However, with use of the multimeter we discovered this range is different. The flex sensor comes in two sizes (2.2 and 4,5 inch). The sensors are available in the lab so we were able to play a little with them. We observed that the sensor needs a specific type of bendage in order to deliver usable results. Specific as in not bending it at the ‘stem’ but at the actual sensing part. This is important because only then the sensor outputs correct readings. According to the documentation the sensor works between 0°  (flat) and 90°. We found that it gives output when bending further than this stated threshold. A possible problem for us to occur when using this sensor is that the shape is not persistent. The sensor will probably slowly shaped to a position which is used the most. 
+                            <p>The flex sensor is an analog sensor which is using flexibility to determine the amount of resistance. The documentation states that the resistance ranges from 30k ohm to 50-70k ohm. However, with use of the multimeter we discovered this range is different. The flex sensor comes in two sizes (2.2 and 4,5 inch). The sensors were available in the lab so we were able to play a little with them. We observed that the sensor needs a specific type of bendage in order to deliver usable results. Specific as in not bending it at the ‘stem’ but at the actual sensing part. This is important because only then the sensor outputs correct readings. According to the documentation the sensor works between 0°  (flat) and 90°. We found that it gives output when bending further than this stated threshold. A possible problem for us to occur when using this sensor is that the shape is not persistent. The sensor will probably slowly shaped to a position which is used the most. 
 </p>
                             <ul>
                                 <li>2.2” (5.588 cm)</li>
@@ -124,7 +124,7 @@
                     <div class="wrapper_affordances">
                         <div class="objects">
                             <p>The sensor generates a voltage when being flexed, shocked or touched. The voltage output for the piezo sensor can be as much as 90 volts. We hooked a piece of piezo film to the arduino and observed what happened. The sensor, while being flexed -intensively- , generated a very low voltage output. This made the sensor useless for us. However, when this output is high enough one could think about creating a self-sufficient device which does not take a negative load on the environment. </p>
-                            <p>Example: These Piezo sensors can be incorporated into leaves of artificial trees. Thousand and thousands of these sensors can together create enough voltage to empower lights, sound, etc. </p>
+                            <p>Example: These Piezo sensors can be incorporated into leaves of artificial trees. Thousand and thousands of these sensors can together create enough voltage to create a self-sustaining tree full of sounds/lights and other output. </p>
                             <ul>
                                 <li>Flexible PVDF Piezo Polymer Film</li>
                                 <li>Wide dynamic range</li>
@@ -157,7 +157,7 @@ Max. Working voltage: 24V</li>
                                 <li>Water Pressure: ≤2.0MPa</li>
                                 <li>Storage Temperature: -25～+ 80℃</li>
                                 <li>Storage Humidity: 25%～95%RH</li>
-                                <li>Uses a rotating wheel that pulses a hall sensor, by reading those pulses you can monitor the liquid flow. </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ Max. Working voltage: 24V</li>
 <p>We really liked the idea of creating something wearable which allows us to manipulate stimuli over time. Our aim in the research was that the sensor could be incorporated in a wearable object. The easiest element of our research was the heartbeat sensor. The sensor should be placed on one's thumb or earlobe. With the heart rate as input we could think of an exercise buddy who supports your run through the park by always playing the right bpm song. However, we disliked the fact that the sensor only can be used for measuring the heartbeat. We wanted to create our own sensor-context instead of already having the context of where it should be used. 
 </p>            
                 <h5>Flex sensor wearable</h5>
-<p>We decided to work with the flex sensor. The sensor which is thoroughly described in the research. We really liked the idea to incorporate one or more flex sensors to the hand. The flex sensor can be easily manipulated by attaching it to the a finger. When doing this the user has the ability to use the full range of degrees (0 - 90). The analog data could be used in numerous ways. For example one can think of controlling RGB light with three fingers, where each fingers represents the amount of red, green, and blue. However, we failed to correctly implement the assignments time element. Therefore we decided to do something else with the flex sensor.
+<p>We decided to work with the flex sensor. The sensor which is thoroughly described in the research. We really liked the idea to incorporate one or more flex sensors to the hand. The flex sensor can be easily manipulated by attaching it to the fingers. When doing this the user has the ability to manipulate the full range of degrees (0 - 90). The analog data could be used in numerous ways. For example one can think of controlling RGB light with three fingers, where each fingers represents the amount of red, green, and blue. However, we failed to correctly implement the assignments time element. Therefore we decided to do something else with the flex sensor.
 </p>
                 <div class="images">
                 <div class="responsive">
@@ -193,7 +193,7 @@ Max. Working voltage: 24V</li>
             </div>
                 
                 <h5>Flex sensor wind</h5>
-<p>The same flex sensors do not only use human input, because they “sense” bending, it can also be used apart from human beings. This fact opened a whole new range of implementations which brought us to the current idea. The image below will be our project, it is thouroughly explained in the next section.</p>
+<p>The same flex sensors do not only use human input, because they “sense” bending, it can also be used to sense other objects. This fact opened a whole new range of implementations which brought us to the current idea. The image below will be our project, it is thouroughly explained in the next section.</p>
             </div>
             
             <div class="images">
@@ -209,9 +209,9 @@ Max. Working voltage: 24V</li>
             <h3>
               <span aria-hidden="true" class="octicon octicon-link"></span>Description Interface 
           </h3>
-            <p>In the end we decided to do something with weather, in particular with wind. We came up with an idea of mapping colors (RGB) to wind intensity. One should think of this as a couple of large bendable poles which are able to sense the intensity of the wind. These poles are designed as objects and can be placed on a square or public area. Whenever the wind blows the poles act as mysterious tall waving objects to generate curiosity of bystanders. Whenever the poles wave in the wind, light begins to change colours accordingly to the intensity of the wind. This can be thought of as an easy accessible visualisation of the weather. While the physical poles are visibly waving in the wind the visual manifestation of light changes continuously, another attractive feature. As said before it is there to generate a mysterious feeling of curiosity (e.g. why are the lights changing their colors?). Initially, the object should cause a wow feeling, it should surprise people. However a short time of investigating should be enough to understand that wind is the cause for the lights to change color. 
+            <p>In the end we decided to do something with weather, in particular wind. We came up with an idea of mapping colors (RGB) to wind intensity. One should think of this as a couple of large bendable poles which are able to sense the intensity of the wind. These poles are designed as objects and can be placed on a square or public area. Whenever the wind blows the poles act as mysterious tall waving objects to generate curiosity of bystanders. Whenever the poles wave in the wind, light begins to change colours accordingly to the intensity of the wind. This can be thought of as an easy accessible visualisation of the weather. While the physical poles are visibly waving in the wind the visual manifestation of light changes continuously, another attractive feature. As said before it is there to generate a mysterious feeling of curiosity (e.g. why are the lights changing their colors?). Initially, the object should cause a wow feeling, it should surprise people. However a short time of investigating should be enough to understand that wind is the cause for the lights to change color. 
 </p>
-            <p>The idea is that whenever it is cold, the light tries to warm you up with different shades of red light. When more people get attracted to the mimicked feeling of warmth the group starts to grow. The warm light starts a proces in where people are going to feel more coherently to each other. Imagine yourself walking down a square. Few simple white poles attract your attention and you look to its origin and see a warm red/orange light glowing. Obviously you want to know what’s going on and you walk towards the poles, it happens that more people are interested and a small gathering is going on. The same principle can be used for warm summer times, the light will emit blue tinted light to ‘cool’ the people around it.
+            <p>The idea is that whenever it is cold, the light tries to warm you up with different shades of red light. When more people get attracted to the mimicked feeling of warmth, the group starts to grow. The warm light starts a proces in where people are going to feel more coherently to each other. Imagine yourself walking down a square. Few simple white poles attract your attention and you look to its origin and see a warm red/orange light glowing. Obviously you want to know what’s going on and you walk towards the poles, it happens that more people are interested and a small gathering is going on. The same principle can be used for warm summer times, the light will emit blue tinted light to ‘cool’ the people around it.
 </p>
 
             <h3>
