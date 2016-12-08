@@ -93,8 +93,9 @@
             <h5><a href="">3rd research</a></h5>
             <h5><a href="">Our project</a></h5>
             <p>These projects basically all share the same ultimate goal: save the world from it’s ending, create awareness about the environment and change people's behavior. Most of this is done by using facts about carbon dioxide, temperature rise and shocking images. However, as mentioned earlier, one can argue the effectiveness of movies. Speech is can be an effective way of convincing, but it can also just be a nice speech, without any desired results. Our project is based on facts, but it won’t use these to convince people to take their bikes. We’re trying to create a community/movement and represent this to the world. A community that actively chooses to commute by bike instead of cars, a community of which it’s participants together paint/cover a building in a green color, a community that creates a cleaner city. Additionally, we’re creating a physical object, this will open the possibility for others to see who’s participating in the movement. There will also be a sense of coherence as participants can also identify other participants. They will immediately generate some sense of relationship. These two features will be different from existing projects. </p>
+            
             <h3>
-              <span aria-hidden="true" class="octicon octicon-link"></span>Other projects
+              <span aria-hidden="true" class="octicon octicon-link"></span>Other (possible) projects
           </h3>
             <h5>The space project/festival buddy
 </h5>
@@ -110,6 +111,70 @@
             <p>What - Emission and fumes are invisible for the eye but bad for the environment. With a real time data visualisation which maps the environmental state on the actual public environment (e.g. buildings, squares etc..) this issue is projected to create public awareness.
                 <br> How - Actively log environmental relevant data which can be used to realtime project the state of the environment.
                 <br> Explorations - Physical visualization of data on personal or public level</p>
+            
+            <h2>
+            <a id="Weather_visualization" class="anchor" href="#Weather_visualization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation part 2</h2>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Documentation of ALL your research process
+          </h3>
+            
+            <p>In order to create a working protoype we used three different arduinos. Each arduino has its own xbee shield and thus an xbee attached to it. One can see the setup as two seperate groups. There is the bracelet which has its own arduino and breadboard, and there are two other arduinos which can be connected to a bike.</p>
+            <p>The main functions of the arduino inside the bracelet is sending a start and stop signal to its associated bike and recieving a distance back. This distance will then be processed and represented with the right amount of lighting.<br>
+            The other group of arduinos are attached to sperate bikes. They will eventually be connected to its own bracelet, however in this project they are both connected to the same bracelet. This means that this group of arduinos will together be responsible for the changes on the bracelet. In this way we tried to create the community effect. In a possible finished product all the arduinos connected to a bike should also send their data towards a main computer/arduino which will then affect a community goal.</p>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>The schematic of the electronics involved in your project
+          </h3>
+            
+            <p>The pictures below show the schematics which are used to facilitate this project. As decribed above we used three arduinos to get the desired results.</p>
+            
+            <div class="images">
+                <div class="responsive">
+                    <div class="img">
+                        <a target="_blank" href="images/Bracelet_schematic.png"> <img src="images/Bracelet_schematic.png" alt="bracelet schematic" width="300" height="200"> </a>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="img">
+                        <a target="_blank" href="images/Bike_speed_auto.png"> <img src="images/Bike_speed_auto.png" alt="Bike arduino auto" width="300" height="200"> </a>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="img">
+                        <a target="_blank" href="images/Bike_speed_manual.png"> <img src="images/Bike_speed_manual.png" alt="Bike arduino manual" width="300" height="200"> </a>
+                    </div>
+                </div>
+            </div>
+            
+            <p>The first image shows the schematic circuit of the arduino inside the bracelet. In this case there are 6 RGB LEDs which are connected to the PWM pins of the arduino. These could/should be replaced by neopixel strips or something similar to create a better and equal effect on the bracelets. Additionally, there is a button connected to this arduino which is resposible for the start and stop signal. Eventually this button should be replaced by some other sensor to create a more intuitive interface.</p>
+            
+            <p>The second image displays the arduino as it should be implemented and attached to a bike. There is just a simple reed sensor which activates every time a magnet passes by. It is configured to become 'LOW' whenever the magnet passes. The reed sensor is connected to pin number 2 which acts as an interrupt pin. This basically means that all the other code is ignored whenever there is a signal comming from this pin. This property makes sure that we will not miss the magnet passing the reed sensor. </p>
+            
+            <p>The third picture displays the third and last arduino in this project, it is created to mimmic the community effect. Therefore it does not respond to the bracelet and acts uppon a button. It does not respond to the bracelet because in real life every it should only talk to its own bracelet and the overall computer/arduino. 
+            </p>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>All source code
+          </h3>
+            
+            <p>The relevant code for the bracelet is here to<a href="https://github.com/tomhockey01/CART360/blob/master/test_bike.ino.zip?raw=true">download</a>, extra information is provided on this webpage. This code is pretty simple. Knowing that this arduino is not going to get information other than distances it has one variable called 'distance'. Whenever there is serial information available the code updates it distance. Afterwards it checks which case is now active and adjusts the RGB LEDs to it. </p>
+            
+            <p>The code for the arduino connected to the bike is <a href="https://github.com/tomhockey01/CART360/blob/master/Speed2.0.ino.zip?raw=true">here</a>. As displayed and described earlier, this arduino recieves a start and stop signal from the bracelet. In between these signals the interupt pin will act and count the number of pullups. This will be used to calculate the total biking distance. When the stop signal is recieved it will calculate the distance and send this back to the 'bracelet-arduino'. </p>
+            
+            <p>The last piece of code mimics a second bike, click <a href="https://github.com/tomhockey01/CART360/blob/master/Speed3.0.ino.zip?raw=true">here</a> to download it. This is basically is the same code as the previous one, however, this arduino does not recieve serial communication, it only sends distance. Because it does not recieve serial communication it acts on the button.</p>
+            
+            
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Photos of the progress and minimum five photos of the finished project
+          </h3>
+            
+            <h3>
+              <span aria-hidden="true" class="octicon octicon-link"></span>Videos of the progress and a video documentation of the finished project
+          </h3>
+            
+        
             <!-- FOOTER  -->
             <div id="footer_wrap" class="outer">
                 <footer class="inner">
